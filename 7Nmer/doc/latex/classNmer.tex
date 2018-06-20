@@ -1,0 +1,400 @@
+\hypertarget{classNmer}{}\subsection{Referencia de la Clase Nmer}
+\label{classNmer}\index{Nmer@{Nmer}}
+
+
+{\ttfamily \#include $<$Nmer.\+h$>$}
+
+\subsubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classNmer_1_1Base2String}{Base2\+String}
+\begin{DoxyCompactList}\small\item\em Functor para convertir un pair$<$char,int$>$ en un string Necesario para serializar un \hyperlink{classNmer}{Nmer}. \end{DoxyCompactList}\item 
+class \hyperlink{classNmer_1_1ordenCommon}{orden\+Common}
+\item 
+class \hyperlink{classNmer_1_1ordenCrec}{orden\+Crec}
+\item 
+class \hyperlink{classNmer_1_1ordenDecre}{orden\+Decre}
+\item 
+class \hyperlink{classNmer_1_1ordenRare}{orden\+Rare}
+\end{DoxyCompactItemize}
+\subsubsection*{Tipos públicos}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \hyperlink{classNmer_a1b8892df885de3ac91edf3abd8f1b55d}{size\+\_\+type}
+\end{DoxyCompactItemize}
+\subsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classNmer_a3052308309341026c76b16c097e3981d}{obtener\+Nmer} (\hyperlink{classktree}{ktree}$<$ pair$<$ char, int $>$, 4 $>$\+::const\+\_\+node n) const 
+\begin{DoxyCompactList}\small\item\em dado un nodo va iendo hacia la raiz y lo va insertando en un string. \end{DoxyCompactList}\item 
+\hyperlink{classNmer_ac2a651dd05b03e716b877c26386d772e}{Nmer} ()
+\begin{DoxyCompactList}\small\item\em Constructor primitivo . Crea un \hyperlink{classNmer}{Nmer} de longitud maxima 0, con el valor (\textquotesingle{}-\/\textquotesingle{},0) en la raíz. \end{DoxyCompactList}\item 
+\hyperlink{classNmer_aa15e62b748a55aec2f43f65497fc2a5e}{Nmer} (const \hyperlink{classNmer}{Nmer} \&a)
+\item 
+void \hyperlink{classNmer_a1ce1c0cb174d94685c7234f58f9dc119}{list\+\_\+\+Nmer} () const 
+\begin{DoxyCompactList}\small\item\em Imprime los Nmers. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classNmer_a60e2335600c01ee39e865790015818f0}{length} () const 
+\begin{DoxyCompactList}\small\item\em Máxima longitud de los Nmers almacenados. \end{DoxyCompactList}\item 
+\hyperlink{classNmer_a1b8892df885de3ac91edf3abd8f1b55d}{size\+\_\+type} \hyperlink{classNmer_accdea65838fcd53c48a2d05f6809643f}{size} () const 
+\begin{DoxyCompactList}\small\item\em Número de Nmers almacenados. \end{DoxyCompactList}\item 
+\hyperlink{classNmer}{Nmer} \& \hyperlink{classNmer_a129843cfe04a63a199ac641117c052cc}{operator=} (const \hyperlink{classNmer}{Nmer} \&a)
+\item 
+\hyperlink{classNmer}{Nmer} \hyperlink{classNmer_adf184ca659cf3ce3f2db301acae40e56}{Prefix} (string adn)
+\begin{DoxyCompactList}\small\item\em haya un subarbol a partir de la cadena dada \end{DoxyCompactList}\item 
+\hyperlink{classNmer}{Nmer} \hyperlink{classNmer_a3d0bac5611cb1648e5b626a7f7c8e987}{Union} (const \hyperlink{classNmer}{Nmer} reference)
+\begin{DoxyCompactList}\small\item\em hace la union de dos arboles \end{DoxyCompactList}\item 
+bool \hyperlink{classNmer_a3aa6c3d317ab01bd6b8c53434f50d03f}{contains\+String} (const string adn) const 
+\begin{DoxyCompactList}\small\item\em mira a ver si esta contenida la cadena en el arbol \end{DoxyCompactList}\item 
+bool \hyperlink{classNmer_ac5af1362b3f8ef4141574e62bc3510ac}{included} (const \hyperlink{classNmer}{Nmer} reference) const 
+\begin{DoxyCompactList}\small\item\em mira a ver si el arbol esta inluido en otro arbol \end{DoxyCompactList}\item 
+void \hyperlink{classNmer_ae8871242f0e282d71e4c9b4685f468be}{sequence\+A\+DN} (unsigned int l, const string \&adn)
+\begin{DoxyCompactList}\small\item\em partir de una cadena va construyendo el arbol \end{DoxyCompactList}\item 
+bool \hyperlink{classNmer_a418c016bb6e04d2f699ddb694ee0221f}{load\+Serialized} (const string \&nombre\+\_\+fichero)
+\begin{DoxyCompactList}\small\item\em lectura fichero serializado \end{DoxyCompactList}\item 
+float \hyperlink{classNmer_a8df2f2f355423b02413e5e29dc5639e8}{Distance} (const \hyperlink{classNmer}{Nmer} \&x)
+\begin{DoxyCompactList}\small\item\em calcula la distancia entre dos arboles \end{DoxyCompactList}\item 
+set$<$ pair$<$ string, int $>$, \hyperlink{classNmer_1_1ordenCrec}{orden\+Crec} $>$ \hyperlink{classNmer_ac878556843a4b401b4be0e1be6747e45}{rare\+Nmer} (int threshold)
+\begin{DoxyCompactList}\small\item\em calcula los nmers menos comunes en \hyperlink{classNmer}{Nmer} \end{DoxyCompactList}\item 
+set$<$ pair$<$ string, int $>$, \hyperlink{classNmer_1_1ordenDecre}{orden\+Decre} $>$ \hyperlink{classNmer_aaf801908e364dd05d7cc33c81d944b0a}{common\+Nmer} (int threshold)
+\begin{DoxyCompactList}\small\item\em los nmers mas comunes dentro de \hyperlink{classNmer}{Nmer} \end{DoxyCompactList}\item 
+set$<$ pair$<$ string, int $>$, \hyperlink{classNmer_1_1ordenCrec}{orden\+Crec} $>$ \hyperlink{classNmer_a38059ff69b4934e18a5c467338179761}{level} (int l)
+\begin{DoxyCompactList}\small\item\em calula los nmers cuya tamaanio es exactamente l \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Descripción detallada}
+
+
+Definición en la línea 18 del archivo Nmer.\+h.
+
+
+
+\subsubsection{Documentación de los \textquotesingle{}Typedef\textquotesingle{} miembros de la clase}
+\index{Nmer@{Nmer}!size\+\_\+type@{size\+\_\+type}}
+\index{size\+\_\+type@{size\+\_\+type}!Nmer@{Nmer}}
+\paragraph[{\texorpdfstring{size\+\_\+type}{size_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf Nmer\+::size\+\_\+type}}\hypertarget{classNmer_a1b8892df885de3ac91edf3abd8f1b55d}{}\label{classNmer_a1b8892df885de3ac91edf3abd8f1b55d}
+
+
+Definición en la línea 23 del archivo Nmer.\+h.
+
+
+
+\subsubsection{Documentación del constructor y destructor}
+\index{Nmer@{Nmer}!Nmer@{Nmer}}
+\index{Nmer@{Nmer}!Nmer@{Nmer}}
+\paragraph[{\texorpdfstring{Nmer()}{Nmer()}}]{\setlength{\rightskip}{0pt plus 5cm}Nmer\+::\+Nmer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNmer_ac2a651dd05b03e716b877c26386d772e}{}\label{classNmer_ac2a651dd05b03e716b877c26386d772e}
+
+
+Constructor primitivo . Crea un \hyperlink{classNmer}{Nmer} de longitud maxima 0, con el valor (\textquotesingle{}-\/\textquotesingle{},0) en la raíz. 
+
+
+
+Definición en la línea 138 del archivo Nmer.\+cpp.
+
+\index{Nmer@{Nmer}!Nmer@{Nmer}}
+\index{Nmer@{Nmer}!Nmer@{Nmer}}
+\paragraph[{\texorpdfstring{Nmer(const Nmer \&a)}{Nmer(const Nmer &a)}}]{\setlength{\rightskip}{0pt plus 5cm}Nmer\+::\+Nmer (
+\begin{DoxyParamCaption}
+\item[{const {\bf Nmer} \&}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{classNmer_aa15e62b748a55aec2f43f65497fc2a5e}{}\label{classNmer_aa15e62b748a55aec2f43f65497fc2a5e}
+
+
+Definición en la línea 143 del archivo Nmer.\+cpp.
+
+
+
+\subsubsection{Documentación de las funciones miembro}
+\index{Nmer@{Nmer}!common\+Nmer@{common\+Nmer}}
+\index{common\+Nmer@{common\+Nmer}!Nmer@{Nmer}}
+\paragraph[{\texorpdfstring{common\+Nmer(int threshold)}{commonNmer(int threshold)}}]{\setlength{\rightskip}{0pt plus 5cm}set$<$ pair$<$ string, int $>$, {\bf Nmer\+::orden\+Decre} $>$ Nmer\+::common\+Nmer (
+\begin{DoxyParamCaption}
+\item[{int}]{threshold}
+\end{DoxyParamCaption}
+)}\hypertarget{classNmer_aaf801908e364dd05d7cc33c81d944b0a}{}\label{classNmer_aaf801908e364dd05d7cc33c81d944b0a}
+
+
+los nmers mas comunes dentro de \hyperlink{classNmer}{Nmer} 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 290 del archivo Nmer.\+cpp.
+
+\index{Nmer@{Nmer}!contains\+String@{contains\+String}}
+\index{contains\+String@{contains\+String}!Nmer@{Nmer}}
+\paragraph[{\texorpdfstring{contains\+String(const string adn) const }{containsString(const string adn) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Nmer\+::contains\+String (
+\begin{DoxyParamCaption}
+\item[{const string}]{adn}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNmer_a3aa6c3d317ab01bd6b8c53434f50d03f}{}\label{classNmer_a3aa6c3d317ab01bd6b8c53434f50d03f}
+
+
+mira a ver si esta contenida la cadena en el arbol 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 192 del archivo Nmer.\+cpp.
+
+\index{Nmer@{Nmer}!Distance@{Distance}}
+\index{Distance@{Distance}!Nmer@{Nmer}}
+\paragraph[{\texorpdfstring{Distance(const Nmer \&x)}{Distance(const Nmer &x)}}]{\setlength{\rightskip}{0pt plus 5cm}float Nmer\+::\+Distance (
+\begin{DoxyParamCaption}
+\item[{const {\bf Nmer} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classNmer_a8df2f2f355423b02413e5e29dc5639e8}{}\label{classNmer_a8df2f2f355423b02413e5e29dc5639e8}
+
+
+calcula la distancia entre dos arboles 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 246 del archivo Nmer.\+cpp.
+
+\index{Nmer@{Nmer}!included@{included}}
+\index{included@{included}!Nmer@{Nmer}}
+\paragraph[{\texorpdfstring{included(const Nmer reference) const }{included(const Nmer reference) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Nmer\+::included (
+\begin{DoxyParamCaption}
+\item[{const {\bf Nmer}}]{reference}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNmer_ac5af1362b3f8ef4141574e62bc3510ac}{}\label{classNmer_ac5af1362b3f8ef4141574e62bc3510ac}
+
+
+mira a ver si el arbol esta inluido en otro arbol 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 204 del archivo Nmer.\+cpp.
+
+\index{Nmer@{Nmer}!length@{length}}
+\index{length@{length}!Nmer@{Nmer}}
+\paragraph[{\texorpdfstring{length() const }{length() const }}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Nmer\+::length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNmer_a60e2335600c01ee39e865790015818f0}{}\label{classNmer_a60e2335600c01ee39e865790015818f0}
+
+
+Máxima longitud de los Nmers almacenados. 
+
+
+
+Definición en la línea 152 del archivo Nmer.\+cpp.
+
+\index{Nmer@{Nmer}!level@{level}}
+\index{level@{level}!Nmer@{Nmer}}
+\paragraph[{\texorpdfstring{level(int l)}{level(int l)}}]{\setlength{\rightskip}{0pt plus 5cm}set$<$ pair$<$ string, int $>$, {\bf Nmer\+::orden\+Crec} $>$ Nmer\+::level (
+\begin{DoxyParamCaption}
+\item[{int}]{l}
+\end{DoxyParamCaption}
+)}\hypertarget{classNmer_a38059ff69b4934e18a5c467338179761}{}\label{classNmer_a38059ff69b4934e18a5c467338179761}
+
+
+calula los nmers cuya tamaanio es exactamente l 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 296 del archivo Nmer.\+cpp.
+
+\index{Nmer@{Nmer}!list\+\_\+\+Nmer@{list\+\_\+\+Nmer}}
+\index{list\+\_\+\+Nmer@{list\+\_\+\+Nmer}!Nmer@{Nmer}}
+\paragraph[{\texorpdfstring{list\+\_\+\+Nmer() const }{list_Nmer() const }}]{\setlength{\rightskip}{0pt plus 5cm}void Nmer\+::list\+\_\+\+Nmer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNmer_a1ce1c0cb174d94685c7234f58f9dc119}{}\label{classNmer_a1ce1c0cb174d94685c7234f58f9dc119}
+
+
+Imprime los Nmers. 
+
+\begin{DoxyRefDesc}{Tareas pendientes}
+\item[\hyperlink{todo__todo000001}{Tareas pendientes}]Debemos de implementar este método de forma que nos garantizemos que se imprimen todos los Nmers. \end{DoxyRefDesc}
+
+
+Definición en la línea 148 del archivo Nmer.\+cpp.
+
+\index{Nmer@{Nmer}!load\+Serialized@{load\+Serialized}}
+\index{load\+Serialized@{load\+Serialized}!Nmer@{Nmer}}
+\paragraph[{\texorpdfstring{load\+Serialized(const string \&nombre\+\_\+fichero)}{loadSerialized(const string &nombre_fichero)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Nmer\+::load\+Serialized (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{nombre\+\_\+fichero}
+\end{DoxyParamCaption}
+)}\hypertarget{classNmer_a418c016bb6e04d2f699ddb694ee0221f}{}\label{classNmer_a418c016bb6e04d2f699ddb694ee0221f}
+
+
+lectura fichero serializado 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre\+\_\+fichero} & fichero serializado con extension .srl\\
+\hline
+\end{DoxyParams}
+Genera a partir del fichero el ktree que contiene todos los kmers asociados a una cadena de A\+DN
+
+La cadena original viene descrita en el fichero serializado 
+
+Definición en la línea 218 del archivo Nmer.\+cpp.
+
+\index{Nmer@{Nmer}!obtener\+Nmer@{obtener\+Nmer}}
+\index{obtener\+Nmer@{obtener\+Nmer}!Nmer@{Nmer}}
+\paragraph[{\texorpdfstring{obtener\+Nmer(ktree$<$ pair$<$ char, int $>$, 4 $>$\+::const\+\_\+node n) const }{obtenerNmer(ktree< pair< char, int >, 4 >::const_node n) const }}]{\setlength{\rightskip}{0pt plus 5cm}string Nmer\+::obtener\+Nmer (
+\begin{DoxyParamCaption}
+\item[{{\bf ktree}$<$ pair$<$ char, int $>$, 4 $>$\+::const\+\_\+node}]{n}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNmer_a3052308309341026c76b16c097e3981d}{}\label{classNmer_a3052308309341026c76b16c097e3981d}
+
+
+dado un nodo va iendo hacia la raiz y lo va insertando en un string. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em n\+:el} & nodo por el que se quiere conseguir el string hacia arriba \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+el string formado por las etiquetas concadenadas de los nodos hacia su raiz 
+\end{DoxyReturn}
+
+
+Definición en la línea 23 del archivo Nmer.\+cpp.
+
+\index{Nmer@{Nmer}!operator=@{operator=}}
+\index{operator=@{operator=}!Nmer@{Nmer}}
+\paragraph[{\texorpdfstring{operator=(const Nmer \&a)}{operator=(const Nmer &a)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Nmer} \& Nmer\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Nmer} \&}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{classNmer_a129843cfe04a63a199ac641117c052cc}{}\label{classNmer_a129843cfe04a63a199ac641117c052cc}
+
+
+Definición en la línea 160 del archivo Nmer.\+cpp.
+
+\index{Nmer@{Nmer}!Prefix@{Prefix}}
+\index{Prefix@{Prefix}!Nmer@{Nmer}}
+\paragraph[{\texorpdfstring{Prefix(string adn)}{Prefix(string adn)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Nmer} Nmer\+::\+Prefix (
+\begin{DoxyParamCaption}
+\item[{string}]{adn}
+\end{DoxyParamCaption}
+)}\hypertarget{classNmer_adf184ca659cf3ce3f2db301acae40e56}{}\label{classNmer_adf184ca659cf3ce3f2db301acae40e56}
+
+
+haya un subarbol a partir de la cadena dada 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 169 del archivo Nmer.\+cpp.
+
+\index{Nmer@{Nmer}!rare\+Nmer@{rare\+Nmer}}
+\index{rare\+Nmer@{rare\+Nmer}!Nmer@{Nmer}}
+\paragraph[{\texorpdfstring{rare\+Nmer(int threshold)}{rareNmer(int threshold)}}]{\setlength{\rightskip}{0pt plus 5cm}set$<$ pair$<$ string, int $>$, {\bf Nmer\+::orden\+Crec} $>$ Nmer\+::rare\+Nmer (
+\begin{DoxyParamCaption}
+\item[{int}]{threshold}
+\end{DoxyParamCaption}
+)}\hypertarget{classNmer_ac878556843a4b401b4be0e1be6747e45}{}\label{classNmer_ac878556843a4b401b4be0e1be6747e45}
+
+
+calcula los nmers menos comunes en \hyperlink{classNmer}{Nmer} 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 284 del archivo Nmer.\+cpp.
+
+\index{Nmer@{Nmer}!sequence\+A\+DN@{sequence\+A\+DN}}
+\index{sequence\+A\+DN@{sequence\+A\+DN}!Nmer@{Nmer}}
+\paragraph[{\texorpdfstring{sequence\+A\+D\+N(unsigned int l, const string \&adn)}{sequenceADN(unsigned int l, const string &adn)}}]{\setlength{\rightskip}{0pt plus 5cm}void Nmer\+::sequence\+A\+DN (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{l, }
+\item[{const string \&}]{adn}
+\end{DoxyParamCaption}
+)}\hypertarget{classNmer_ae8871242f0e282d71e4c9b4685f468be}{}\label{classNmer_ae8871242f0e282d71e4c9b4685f468be}
+
+
+partir de una cadena va construyendo el arbol 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 209 del archivo Nmer.\+cpp.
+
+\index{Nmer@{Nmer}!size@{size}}
+\index{size@{size}!Nmer@{Nmer}}
+\paragraph[{\texorpdfstring{size() const }{size() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Nmer\+::size\+\_\+type} Nmer\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNmer_accdea65838fcd53c48a2d05f6809643f}{}\label{classNmer_accdea65838fcd53c48a2d05f6809643f}
+
+
+Número de Nmers almacenados. 
+
+
+
+Definición en la línea 156 del archivo Nmer.\+cpp.
+
+\index{Nmer@{Nmer}!Union@{Union}}
+\index{Union@{Union}!Nmer@{Nmer}}
+\paragraph[{\texorpdfstring{Union(const Nmer reference)}{Union(const Nmer reference)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Nmer} Nmer\+::\+Union (
+\begin{DoxyParamCaption}
+\item[{const {\bf Nmer}}]{reference}
+\end{DoxyParamCaption}
+)}\hypertarget{classNmer_a3d0bac5611cb1648e5b626a7f7c8e987}{}\label{classNmer_a3d0bac5611cb1648e5b626a7f7c8e987}
+
+
+hace la union de dos arboles 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 185 del archivo Nmer.\+cpp.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Nmer_8h}{Nmer.\+h}\item 
+src/\hyperlink{Nmer_8cpp}{Nmer.\+cpp}\end{DoxyCompactItemize}
